@@ -1,0 +1,1071 @@
+/* WordPress-style Admin CSS for Migori County PMC Portal */
+
+:root {
+    --wp-admin-blue: #0073aa;
+    --wp-admin-blue-hover: #005a87;
+    --wp-admin-gray-900: #23282d;
+    --wp-admin-gray-800: #32373c;
+    --wp-admin-gray-700: #40464d;
+    --wp-admin-gray-600: #646970;
+    --wp-admin-gray-500: #8c8f94;
+    --wp-admin-gray-400: #a7aaad;
+    --wp-admin-gray-300: #c3c4c7;
+    --wp-admin-gray-200: #dcdcde;
+    --wp-admin-gray-100: #f6f7f7;
+    --wp-admin-sidebar: #23282d;
+    --wp-admin-sidebar-hover: #32373c;
+    --wp-admin-green: #00a32a;
+    --wp-admin-orange: #f56e28;
+    --wp-admin-red: #d63638;
+
+    /* PMC Colors */
+    --pmc-navy: #003366;
+    --pmc-gold: #FFD966;
+    --pmc-gray: #F4F4F4;
+    --pmc-text: #333333;
+    --pmc-green: #4CAF50;
+}
+
+/* Dark mode color overrides */
+
+/* Base Layout */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--pmc-text);
+    background-color: var(--pmc-gray);
+    overflow-x: hidden;
+}
+
+
+/* Admin Layout Structure */
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+.admin-sidebar {
+    width: 250px;
+    background-color: var(--wp-admin-sidebar);
+    color: #ffffff;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    border-right: 1px solid var(--wp-admin-gray-200);
+}
+
+
+.admin-content {
+    margin-left: 250px;
+    padding: 1.5rem;
+    padding-bottom: 120px;
+    overflow-x: auto;
+    box-sizing: border-box;
+    width: calc(100% - 250px);
+    min-height: calc(100vh - 64px);
+    background: var(--pmc-gray);
+    position: relative;
+}
+
+
+/* Header Styles */
+.admin-header {
+    background: linear-gradient(135deg, var(--pmc-navy) 0%, #004080 100%);
+    border-bottom: 3px solid var(--pmc-gold);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    height: 64px;
+    color: white;
+}
+
+/* Footer positioning */
+.admin-footer {
+    background: white;
+    border-top: 1px solid var(--wp-admin-gray-200);
+    padding: 1.5rem;
+    margin-top: 2rem;
+    color: var(--wp-admin-gray-700);
+    position: relative;
+    clear: both;
+    border-radius: 8px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+/* Sidebar Navigation */
+.sidebar-nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+    margin: 0.25rem 0;
+}
+
+.sidebar-nav-item:hover {
+    background: var(--wp-admin-sidebar-hover);
+    border-left: 3px solid var(--pmc-gold);
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar-nav-item.active {
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 3px solid var(--pmc-gold);
+    color: white;
+    font-weight: 600;
+}
+
+/* Cards */
+.pmc-card, .wp-card {
+    background: #ffffff !important;
+    border-radius: 8px;
+    border: 1px solid var(--wp-admin-gray-200);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+
+.pmc-card-header, .wp-card-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--wp-admin-gray-200);
+    background: #ffffff !important;
+    color: var(--wp-admin-gray-900);
+}
+
+
+.pmc-card-content, .wp-card-content {
+    padding: 1.5rem;
+    background: #ffffff !important;
+    color: var(--wp-admin-gray-700);
+}
+
+
+/* Form Elements */
+.form-input, .wp-form-input, input[type="text"], input[type="email"], input[type="password"], input[type="number"], textarea, select {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--wp-admin-gray-300);
+    border-radius: 4px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    background: white;
+    color: var(--wp-admin-gray-900);
+    transition: border-color 0.2s ease;
+}
+
+
+.form-input:focus, .wp-form-input:focus, input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--pmc-navy);
+    box-shadow: 0 0 0 1px var(--pmc-navy);
+}
+
+/* Buttons */
+.btn, .wp-btn, button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.btn-primary, .wp-btn-primary {
+    background: var(--pmc-navy);
+    color: white;
+    border-color: var(--pmc-navy);
+}
+
+.btn-primary:hover, .wp-btn-primary:hover {
+    background: #002244;
+    border-color: #002244;
+}
+
+.btn-secondary, .wp-btn-secondary {
+    background: var(--wp-admin-gray-500);
+    color: white;
+    border-color: var(--wp-admin-gray-500);
+}
+
+
+/* Tables */
+.wp-table, table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.wp-table th, th {
+    background: var(--wp-admin-gray-100);
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--wp-admin-gray-900);
+    border-bottom: 1px solid var(--wp-admin-gray-200);
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+.wp-table td, td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--wp-admin-gray-200);
+    color: var(--wp-admin-gray-700);
+}
+
+
+.wp-table tbody tr:hover, tbody tr:hover {
+    background: var(--wp-admin-gray-100);
+}
+
+
+/* Text Colors */
+.text-gray-900 {
+    color: var(--wp-admin-gray-900);
+}
+
+
+.text-gray-700 {
+    color: var(--wp-admin-gray-700);
+}
+
+
+.text-gray-600 {
+    color: var(--wp-admin-gray-600);
+}
+
+
+.text-gray-500 {
+    color: var(--wp-admin-gray-500);
+}
+
+
+/* Badges */
+.wp-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.wp-badge-success, .bg-green-100 {
+    background: rgba(16, 185, 129, 0.1);
+    color: #065f46;
+}
+
+
+.wp-badge-warning, .bg-yellow-100 {
+    background: rgba(245, 158, 11, 0.1);
+    color: #92400e;
+}
+
+
+.wp-badge-danger, .bg-red-100 {
+    background: rgba(239, 68, 68, 0.1);
+    color: #991b1b;
+}
+
+
+/* Dark mode toggle */
+.dark-mode-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: white;
+}
+
+.dark-mode-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .admin-sidebar {
+        transform: translateX(-100%);
+        width: 280px;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .admin-sidebar.mobile-open {
+        transform: translateX(0);
+    }
+
+    .admin-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .admin-footer {
+        left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-content {
+        padding: 0.75rem;
+    }
+    
+    .wp-card-content {
+        padding: 1rem;
+    }
+    
+    .wp-card-header {
+        padding: 0.75rem 1rem;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+    
+    .flex {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .sm\:flex-row {
+        flex-direction: row;
+    }
+    
+    .sm\:space-x-3 > :not([hidden]) ~ :not([hidden]) {
+        margin-left: 0.75rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .admin-content {
+        padding: 0.5rem;
+    }
+    
+    .text-2xl {
+        font-size: 1.5rem;
+    }
+    
+    .text-xl {
+        font-size: 1.25rem;
+    }
+    
+    .px-6 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .py-4 {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-content {
+        padding: 1rem;
+    }
+
+    .pmc-card-content, .wp-card-content {
+        padding: 1rem;
+    }
+}
+
+/* Additional dark mode styles for better visibility */
+
+
+
+
+
+/* PMC specific components */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.status-planning {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+
+.status-ongoing {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+
+.status-completed {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+
+.status-suspended {
+    background: #fed7d7;
+    color: #c53030;
+}
+
+/* Mobile utilities */
+.mobile-hidden {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .mobile-hidden {
+        display: block;
+    }
+}
+
+.desktop-hidden {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .desktop-hidden {
+        display: none;
+    }
+}
+
+/* Quick Action Cards */
+.quick-action-card {
+    padding: 1rem;
+    border: 1px solid var(--wp-admin-gray-200);
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    background: #ffffff !important;
+}
+
+.quick-action-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-color: var(--wp-admin-blue);
+}
+
+.quick-action-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.5rem;
+}
+
+/* Stats Cards */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: #ffffff !important;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--wp-admin-gray-200);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.stat-card-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--wp-admin-gray-900);
+    margin-bottom: 0.25rem;
+}
+
+.stat-card-label {
+    font-size: 0.875rem;
+    color: var(--wp-admin-gray-600);
+    margin: 0;
+}
+
+/* Loading states */
+.wp-loading {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--wp-admin-gray-600);
+    font-size: 0.875rem;
+}
+
+.wp-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--wp-admin-gray-300);
+    border-top: 2px solid var(--wp-admin-blue);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* PMC specific colors for components */
+.btn-primary,
+.pmc-primary {
+    background-color: var(--pmc-navy) !important;
+    border-color: var(--pmc-navy) !important;
+}
+
+.btn-primary:hover,
+.pmc-primary:hover {
+    background-color: #002244 !important;
+    border-color: #002244 !important;
+}
+
+/* Government Table Styling */
+.gov-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.gov-table th {
+    background: #003366;
+    color: white;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.gov-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.gov-table tr:hover {
+    background: #f9fafb;
+}
+
+/* Government Forms */
+.gov-form-group {
+    margin-bottom: 1rem;
+}
+
+.gov-form-label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+
+.gov-form-input, .gov-form-select, .gov-form-textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.gov-form-input:focus, .gov-form-select:focus, .gov-form-textarea:focus {
+    outline: none;
+    border-color: #003366;
+    box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+}
+
+/* Government Buttons */
+.gov-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.gov-btn-primary {
+    background: #003366;
+    color: white;
+}
+
+.gov-btn-primary:hover {
+    background: #004080;
+}
+
+.gov-btn-secondary {
+    background: #6b7280;
+    color: white;
+}
+
+.gov-btn-secondary:hover {
+    background: #4b5563;
+}
+
+.gov-btn-success {
+    background: #10b981;
+    color: white;
+}
+
+.gov-btn-danger {
+    background: #ef4444;
+    color: white;
+}
+
+/* Government Cards */
+.gov-card {
+    background: #ffffff !important;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+}
+
+.gov-card-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    background: #ffffff !important;
+    border-radius: 8px 8px 0 0;
+}
+
+.gov-card-content {
+    padding: 1.5rem;
+    background: #ffffff !important;
+}
+
+/* Admin Layout */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    background: #f8fafc;
+}
+
+
+
+.pmc-card-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+.pmc-card-content {
+    padding: 1.5rem;
+}
+
+/* Dark mode for form elements */
+
+
+/* Dark mode for text colors */
+.text-primary {
+    color: #111827;
+}
+
+
+.text-secondary {
+    color: #6b7280;
+}
+
+
+.text-muted {
+    color: #9ca3af;
+}
+
+
+/* Dark mode for tables */
+.table-row {
+    background: white;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+
+.table-row:hover {
+    background: #f9fafb;
+}
+
+
+/* Dark mode for buttons */
+.btn-primary {
+    background: #3b82f6;
+    color: white;
+    border: 1px solid #3b82f6;
+}
+
+
+.btn-secondary {
+    background: #6b7280;
+    color: white;
+    border: 1px solid #6b7280;
+}
+
+
+/* Dark mode for filters and search */
+.filter-container {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+
+/* Dark mode styles */
+
+
+
+
+
+
+
+/* Dark mode text colors */
+
+
+
+
+
+
+/* Dark mode form elements */
+
+
+/* Dark mode tables */
+
+
+
+/* Dark mode buttons */
+
+
+/* Dark mode breadcrumbs */
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .admin-sidebar {
+        transform: translateX(-100%);
+        z-index: 50;
+    }
+
+    .admin-sidebar.mobile-open {
+        transform: translateX(0);
+    }
+
+    .admin-content,
+    .admin-footer {
+        margin-left: 0;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .pmc-card, .wp-card, .gov-card {
+        margin: 0.5rem 0;
+        background: #ffffff !important;
+    }
+
+    .pmc-card-content, .wp-card-content, .gov-card-content {
+        padding: 1rem;
+        background: #ffffff !important;
+    }
+
+    .pmc-card-header, .wp-card-header, .gov-card-header {
+        padding: 0.75rem 1rem;
+        background: #ffffff !important;
+    }
+
+    .grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+
+    .stat-card {
+        background: #ffffff !important;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Make text responsive */
+    .text-2xl {
+        font-size: 1.5rem !important;
+    }
+
+    .text-xl {
+        font-size: 1.25rem !important;
+    }
+
+    .text-lg {
+        font-size: 1.125rem !important;
+    }
+
+    /* Responsive padding adjustments */
+    .px-6 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .py-4 {
+        padding-top: 0.75rem !important;
+        padding-bottom: 0.75rem !important;
+    }
+
+    .p-6 {
+        padding: 1rem !important;
+    }
+
+    /* Responsive flex adjustments */
+    .flex {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .flex.items-center {
+        align-items: stretch;
+    }
+
+    .flex.justify-between {
+        justify-content: flex-start;
+    }
+
+    /* Make buttons full width on mobile */
+    .btn, .wp-btn, .gov-btn {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Tablet responsiveness */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .admin-sidebar {
+        width: 200px;
+    }
+
+    .admin-content,
+    .admin-footer {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+        padding: 1.25rem;
+    }
+
+    .pmc-card, .wp-card, .gov-card {
+        background: #ffffff !important;
+    }
+
+    .pmc-card-content, .wp-card-content, .gov-card-content {
+        background: #ffffff !important;
+        padding: 1.25rem;
+    }
+
+    .pmc-card-header, .wp-card-header, .gov-card-header {
+        background: #ffffff !important;
+        padding: 1rem 1.25rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.25rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.25rem;
+    }
+}
+
+/* Small screen improvements */
+@media (max-width: 640px) {
+    .admin-content {
+        padding: 0.75rem;
+    }
+
+    .pmc-card, .wp-card, .gov-card {
+        margin: 0.5rem 0;
+        background: #ffffff !important;
+        border-radius: 6px;
+    }
+
+    .pmc-card-content, .wp-card-content, .gov-card-content {
+        padding: 0.75rem;
+        background: #ffffff !important;
+    }
+
+    .pmc-card-header, .wp-card-header, .gov-card-header {
+        padding: 0.75rem;
+        background: #ffffff !important;
+    }
+
+    .stat-card {
+        background: #ffffff !important;
+        padding: 0.75rem;
+        text-align: center;
+    }
+
+    .stat-card-value {
+        font-size: 1.25rem !important;
+    }
+
+    .stat-card-label {
+        font-size: 0.75rem !important;
+    }
+
+    /* Ensure all grids are single column on small screens */
+    .grid,
+    .stats-grid,
+    .wp-grid,
+    .wp-grid-2,
+    .wp-grid-3,
+    .wp-grid-4 {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem;
+    }
+
+    /* Stack elements vertically */
+    .flex {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    /* Full width buttons */
+    .btn, .wp-btn, .gov-btn, button {
+        width: 100% !important;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Ensure proper scrolling */
+.admin-content {
+    overflow-x: auto;
+    position: relative;
+}
+
+/* Fix filter forms */
+.grid.grid-cols-1.md\\:grid-cols-4 {
+    display: grid;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .grid.grid-cols-1.md\\:grid-cols-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Additional card background enforcement */
+.bg-white,
+.filter-container,
+.table-row {
+    background: #ffffff !important;
+}
+
+/* Responsive table improvements */
+@media (max-width: 768px) {
+    .wp-table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .wp-table {
+        min-width: 600px;
+        background: #ffffff !important;
+    }
+
+    .wp-table th,
+    .wp-table td {
+        white-space: nowrap;
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+/* Ensure consistent white backgrounds across all variations */
+.card,
+.dashboard-card,
+.content-card,
+.admin-card,
+.project-card,
+.feedback-card {
+    background: #ffffff !important;
+}
+
+.card-header,
+.dashboard-card-header,
+.content-card-header,
+.admin-card-header,
+.project-card-header,
+.feedback-card-header {
+    background: #ffffff !important;
+}
+
+.card-content,
+.card-body,
+.dashboard-card-content,
+.content-card-content,
+.admin-card-content,
+.project-card-content,
+.feedback-card-content {
+    background: #ffffff !important;
+}
+
+/* Mobile navigation improvements */
+@media (max-width: 1024px) {
+    .mobile-menu-toggle {
+        display: flex !important;
+    }
+
+    .admin-header .hidden.lg\\:flex {
+        display: none !important;
+    }
+}

@@ -1,0 +1,36 @@
+[2025-07-05 12:54:20] INFO: Activity: [admin_dashboard_access] Accessed main admin dashboard {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 12:55:27] INFO: Activity: [csv_import_access] Accessed CSV import page {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 12:56:01] INFO: Activity: [csv_import_access] Accessed CSV import page {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 12:56:06] INFO: Activity: [projects_page_access] Accessed projects management page {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 12:56:32] INFO: Activity: [Updated project visibility to 'published' for project ID: 1] 1 {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 12:58:08] INFO: Activity: [transaction_added] Added new disbursement transaction for project ID 1 {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 13:04:59] INFO: Activity: [transaction_added] Added new expenditure transaction for project ID 1 {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 13:21:08] INFO: Activity: [transaction_added] Added new disbursement transaction for project ID 1 {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 13:22:01] INFO: Activity: [transaction_added] Added new expenditure transaction for project ID 1 {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 13:23:08] INFO: Activity: [transaction_added] Added new expenditure transaction for project ID 1 {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 13:23:25] INFO: Activity: [projects_page_access] Accessed projects management page {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 13:23:39] INFO: Activity: [Updated step status for project ID: 1] 1 {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 13:24:01] INFO: Activity: [Added project step for project ID: 1] 1 {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 13:25:27] INFO: Activity: [projects_page_access] Accessed projects management page {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 13:25:46] INFO: Activity: [Updated step status for project ID: 1] 1 {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 13:25:52] INFO: Activity: [Updated step status for project ID: 1] 1 {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 13:46:05] INFO: Activity: [Updated project step for project ID: 1] 1 {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 13:54:37] INFO: Activity: [projects_page_access] Accessed projects management page {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 13:55:10] INFO: Activity: [Project updated: Migori County Health Center Construction] 1 {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 13:55:10] INFO: Activity: [projects_page_access] Accessed projects management page {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 13:55:30] INFO: Activity: [Project updated: Migori County Health Center Construction] 1 {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 13:55:30] INFO: Activity: [projects_page_access] Accessed projects management page {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 14:08:50] INFO: Activity: [Project updated: Migori County Health Center Construction] 1 {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 15:38:44] INFO: Activity: [admin_dashboard_access] Accessed main admin dashboard {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 15:40:51] INFO: Activity: [csv_import_access] Accessed CSV import page {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 15:44:39] INFO: Activity: [Project created: Awendo sewage] 1 {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 15:45:49] INFO: Activity: [Updated step status for project ID: 10] 1 {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 15:46:05] INFO: Activity: [projects_page_access] Accessed projects management page {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 15:46:16] INFO: Activity: [projects_page_access] Accessed projects management page {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 15:47:37] INFO: Activity: [Updated project visibility to 'published' for project ID: 10] 1 {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 15:56:19] INFO: Activity: [csv_import_access] Accessed CSV import page {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 16:08:49] INFO: Activity: [projects_page_access] Accessed projects management page {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 16:09:48] INFO: Activity: [transaction_added] Added new disbursement transaction for project ID 10 {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 16:10:24] INFO: Activity: [admin_dashboard_access] Accessed main admin dashboard {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 16:10:27] INFO: Activity: [projects_page_access] Accessed projects management page {"admin_id":1,"target":null,"ip":"::1"}
+[2025-07-05 16:12:53] INFO: Activity: [transaction_added] Added new expenditure transaction for project ID 10 {"admin_id":1,"target":null,"ip":"::1"}

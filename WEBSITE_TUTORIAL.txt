@@ -1,0 +1,443 @@
+
+# MIGORI COUNTY PROJECT MANAGEMENT PORTAL - USER TUTORIAL
+
+## TABLE OF CONTENTS
+1. System Overview
+2. Getting Started
+3. Admin Login Process
+4. Dashboard Navigation
+5. Project Management
+6. User Management
+7. Budget Management
+8. Community Feedback
+9. Reports and Analytics
+10. System Settings
+11. Security Features
+12. Troubleshooting
+
+---
+
+## 1. SYSTEM OVERVIEW
+
+The Migori County Project Management Portal is a comprehensive web-based system designed to:
+- Track county development projects from planning to completion
+- Enable community feedback and engagement
+- Manage project budgets and transactions
+- Generate reports for transparency
+- Provide role-based access control for different user types
+
+### Key Features:
+- **Public Portal**: Citizens can view published projects and provide feedback
+- **Admin Portal**: Authorized personnel can manage projects, budgets, and system settings
+- **Role-Based Access**: Different permission levels for different user types
+- **Security**: CSRF protection, session management, and activity logging
+
+---
+
+## 2. GETTING STARTED
+
+### System Requirements:
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+- Internet connection
+- Admin credentials (provided by system administrator)
+
+### Accessing the System:
+1. Open your web browser
+2. Navigate to your website URL
+3. You'll see the public portal homepage
+4. Click "Admin Login" or visit /login.php to access admin features
+
+### First-Time Setup:
+- Contact your system administrator for login credentials
+- Ensure you have the appropriate permissions for your role
+- Familiarize yourself with the dashboard layout
+
+---
+
+## 3. ADMIN LOGIN PROCESS
+
+### Logging In:
+1. Navigate to the login page
+2. Enter your email address
+3. Enter your password
+4. Click "Sign In"
+
+### Security Features:
+- Session timeout after 1 hour of inactivity
+- Failed login attempt tracking
+- Secure session management
+- IP address monitoring
+
+### If Login Fails:
+- Check your email and password
+- Ensure Caps Lock is off
+- Contact administrator if locked out
+- Wait if you've exceeded login attempts
+
+---
+
+## 4. DASHBOARD NAVIGATION
+
+### Main Dashboard Elements:
+
+#### Quick Statistics Cards:
+- Total Projects: Shows total number of projects in system
+- Ongoing Projects: Currently active projects
+- Completed Projects: Successfully finished projects
+- This Month: Projects created this month
+
+#### Quick Actions Panel:
+- Import CSV: Bulk import projects from spreadsheet
+- Add Project: Create new individual project
+- Manage Users: Add/edit admin accounts (if permitted)
+- View Reports: Access analytics and reports
+
+#### Recent Activity Section:
+- Recent Projects: Latest projects added to system
+- Recent Feedback: Latest community comments/feedback
+- Activity Logs: Recent system activities
+
+#### Navigation Sidebar:
+- Dashboard: Main overview page
+- Projects: Project management section
+- Budget Management: Financial tracking
+- Feedback: Community engagement
+- Reports: Analytics and exports
+- Admin Tools: User and system management
+
+---
+
+## 5. PROJECT MANAGEMENT
+
+### Creating New Projects:
+
+#### Step 1: Basic Information
+1. Click "Create Project" or navigate to Create Project page
+2. Fill in required fields:
+   - Project Name: Clear, descriptive title
+   - Description: Detailed project overview
+   - Department: Select responsible department
+   - Project Year: Year of implementation
+
+#### Step 2: Location Details
+1. County: Select Migori (or appropriate county)
+2. Sub-County: Choose from dropdown
+3. Ward: Select specific ward
+4. Location Address: Physical address
+5. Coordinates: GPS coordinates (optional)
+
+#### Step 3: Timeline and Contractors
+1. Start Date: Project commencement date
+2. Expected Completion: Projected end date
+3. Contractor Name: Primary contractor
+4. Contractor Contact: Phone/email information
+
+#### Step 4: Project Steps
+1. Define project phases/milestones
+2. Set expected duration for each step
+3. Add descriptions for each phase
+
+### Managing Existing Projects:
+
+#### Finding Projects:
+1. Navigate to Projects section
+2. Use search bar to find specific projects
+3. Filter by status, department, or year
+4. Sort by date, name, or progress
+
+#### Project Actions:
+- **View Details**: See complete project information
+- **Edit**: Modify project details (if permitted)
+- **Manage Steps**: Update project phases and progress
+- **Add Transactions**: Record budget allocations/expenses
+- **Change Status**: Update project status (planning/ongoing/completed)
+- **Visibility**: Control public visibility (published/private)
+
+### Project Status Management:
+
+#### Status Types:
+- **Planning**: Project in design/approval phase
+- **Ongoing**: Currently being implemented
+- **Completed**: Successfully finished
+- **Suspended**: Temporarily halted
+- **Cancelled**: Permanently stopped
+
+#### Updating Progress:
+1. Click on project to manage
+2. Navigate to "Manage Steps" section
+3. Update step status (pending/in progress/completed)
+4. System automatically calculates overall progress percentage
+
+---
+
+## 6. USER MANAGEMENT
+
+### Managing Admin Accounts (Super Admin Only):
+
+#### Creating New Admins:
+1. Navigate to "Manage Admins"
+2. Click "Add New Admin"
+3. Fill in required information:
+   - Full Name
+   - Email Address
+   - Username
+   - Initial Password
+   - Role Assignment
+
+#### Admin Roles:
+- **Super Admin**: Full system access
+- **Admin**: Project management and reporting
+- **Viewer**: Read-only access to assigned projects
+
+#### Permissions Management:
+1. Go to "Roles & Permissions"
+2. Select admin to modify
+3. Grant/revoke specific permissions:
+   - Project Management
+   - Budget Management
+   - User Management
+   - Report Access
+   - System Settings
+
+#### Monitoring Admin Activity:
+- View "Activity Logs" for user actions
+- Monitor login patterns
+- Track permission changes
+- Review security events
+
+---
+
+## 7. BUDGET MANAGEMENT
+
+### Adding Financial Transactions:
+
+#### Allocation Transactions:
+1. Navigate to project management
+2. Click "Add Transaction"
+3. Select "Allocation" type
+4. Enter amount and description
+5. Upload supporting documents (optional)
+
+#### Expenditure Transactions:
+1. Follow same process as allocation
+2. Select "Expenditure" type
+3. Provide detailed description of expense
+4. Upload receipts/invoices
+
+#### Transaction Categories:
+- Budget Allocation: Funds assigned to project
+- Equipment Purchase: Machinery/tools bought
+- Labor Costs: Payment for workers
+- Materials: Construction/project materials
+- Administrative: Management and overhead costs
+
+### Budget Tracking:
+- View total allocated vs spent amounts
+- Monitor remaining budget
+- Generate financial reports
+- Track spending patterns
+
+---
+
+## 8. COMMUNITY FEEDBACK
+
+### Managing Public Comments:
+
+#### Comment Moderation:
+1. Navigate to "Feedback" section
+2. Review pending comments
+3. Approve appropriate comments
+4. Reject inappropriate content
+5. Respond to citizen inquiries
+
+#### Feedback Types:
+- **Comments**: General project feedback
+- **Questions**: Citizen inquiries
+- **Complaints**: Issues or concerns
+- **Suggestions**: Improvement recommendations
+
+#### Response Management:
+1. Select comment to respond to
+2. Write appropriate response
+3. Choose to make response public or private
+4. Send email notification (if enabled)
+
+### Grievance Handling:
+1. Serious complaints escalated to grievances
+2. Track resolution status
+3. Document resolution steps
+4. Provide status updates to complainants
+
+---
+
+## 9. REPORTS AND ANALYTICS
+
+### Available Reports:
+
+#### Project Reports:
+- Project summary by department
+- Progress tracking reports
+- Timeline analysis
+- Completion statistics
+
+#### Financial Reports:
+- Budget allocation reports
+- Expenditure summaries
+- Department-wise spending
+- Variance analysis
+
+#### Community Engagement:
+- Feedback statistics
+- Response time analysis
+- Community participation metrics
+
+### Generating Reports:
+1. Navigate to "PMC Reports"
+2. Select report type
+3. Choose date range
+4. Apply filters (department, status, etc.)
+5. Generate and download (PDF/Excel)
+
+### Export Options:
+- PDF: For formal presentations
+- Excel: For data analysis
+- CSV: For database imports
+
+---
+
+## 10. SYSTEM SETTINGS
+
+### Configuration Options (Super Admin Only):
+
+#### General Settings:
+- System name and branding
+- Contact information
+- Default time zone
+- Email configuration
+
+#### Security Settings:
+- Session timeout duration
+- Password requirements
+- Login attempt limits
+- Two-factor authentication
+
+#### Notification Settings:
+- Email templates
+- Automatic notifications
+- Alert preferences
+
+### Backup and Maintenance:
+- Regular database backups
+- System log management
+- Performance monitoring
+- Update scheduling
+
+---
+
+## 11. SECURITY FEATURES
+
+### Built-in Security:
+
+#### Access Control:
+- Role-based permissions
+- Session management
+- CSRF protection
+- Input validation
+
+#### Monitoring:
+- Login attempt tracking
+- Activity logging
+- Suspicious behavior detection
+- IP address monitoring
+
+#### Data Protection:
+- Secure password storage
+- Encrypted sessions
+- SQL injection prevention
+- XSS protection
+
+### Best Practices:
+1. Use strong, unique passwords
+2. Log out when finished
+3. Don't share login credentials
+4. Report suspicious activity
+5. Keep browser updated
+
+---
+
+## 12. TROUBLESHOOTING
+
+### Common Issues:
+
+#### Login Problems:
+- **Problem**: Can't log in
+- **Solution**: Check credentials, ensure account is active, contact admin
+
+- **Problem**: Session timeout
+- **Solution**: Log in again, activity resets timeout
+
+#### Page Access Issues:
+- **Problem**: "Access Denied" messages
+- **Solution**: Contact admin to check permissions
+
+#### File Upload Problems:
+- **Problem**: CSV import fails
+- **Solution**: Check file format, ensure proper headers, verify file size
+
+#### Performance Issues:
+- **Problem**: Slow loading
+- **Solution**: Clear browser cache, check internet connection
+
+### Getting Help:
+1. Check this tutorial first
+2. Review system documentation
+3. Contact system administrator
+4. Check activity logs for errors
+5. Report persistent issues
+
+### System Maintenance:
+- Regular backups performed automatically
+- Updates applied during maintenance windows
+- Performance monitoring ongoing
+- Security patches applied promptly
+
+---
+
+## QUICK REFERENCE GUIDE
+
+### Daily Operations Checklist:
+□ Review new feedback/comments
+□ Check project progress updates
+□ Review recent activities
+□ Monitor system alerts
+□ Update project statuses as needed
+
+### Weekly Tasks:
+□ Generate progress reports
+□ Review budget allocations
+□ Check user activity logs
+□ Update project timelines
+□ Respond to pending grievances
+
+### Monthly Tasks:
+□ Generate comprehensive reports
+□ Review system performance
+□ Update user permissions
+□ Archive completed projects
+□ Plan upcoming projects
+
+---
+
+## CONTACT INFORMATION
+
+For technical support or additional training:
+- System Administrator: [Contact Details]
+- IT Support: [Contact Details]
+- User Manual Updates: [Contact Details]
+
+---
+
+This tutorial should be used alongside hands-on training and refers to the current version of the system. Features and interfaces may be updated periodically.
+
+Last Updated: [Current Date]
+Version: 1.0
