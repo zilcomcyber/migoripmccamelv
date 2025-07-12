@@ -1,0 +1,797 @@
+/* Consolidated WordPress-style Admin CSS for Migori County PMC Portal */
+
+:root {
+    --wp-admin-blue: #0073aa;
+    --wp-admin-blue-hover: #005a87;
+    --wp-admin-gray-900: #23282d;
+    --wp-admin-gray-800: #32373c;
+    --wp-admin-gray-700: #40464d;
+    --wp-admin-gray-600: #646970;
+    --wp-admin-gray-500: #8c8f94;
+    --wp-admin-gray-400: #a7aaad;
+    --wp-admin-gray-300: #c3c4c7;
+    --wp-admin-gray-200: #dcdcde;
+    --wp-admin-gray-100: #f6f7f7;
+    --wp-admin-sidebar: #23282d;
+    --wp-admin-sidebar-hover: #32373c;
+    --wp-admin-green: #00a32a;
+    --wp-admin-orange: #f56e28;
+    --wp-admin-red: #d63638;
+    --pmc-navy: #003366;
+    --pmc-gold: #FFD966;
+    --pmc-gray: #F4F4F4;
+    --pmc-text: #333333;
+    --pmc-green: #4CAF50;
+    --white: #ffffff;
+}
+
+/* Base Layout */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--pmc-text);
+    background-color: var(--pmc-gray);
+    overflow-x: hidden;
+}
+
+/* Prevent body scroll conflicts */
+body {
+    position: relative;
+}
+
+/* Fix main content area scrolling */
+.admin-content > * {
+    max-width: 100%;
+}
+
+/* Ensure proper content flow */
+.admin-content .bg-white {
+    overflow: visible;
+}
+
+/* Fix modal and overlay z-index issues */
+.fixed.inset-0 {
+    z-index: 1050;
+}
+
+/* Prevent horizontal scroll on cards */
+.pmc-card, .wp-card, .gov-card, .card, .dashboard-card, .content-card, .admin-card, .project-card, .feedback-card {
+    overflow: visible;
+    word-wrap: break-word;
+}
+
+/* Admin Layout Structure */
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+.admin-sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    color: var(--pmc-navy);
+    position: fixed;
+    top: 64px;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    border-right: 1px solid var(--wp-admin-gray-200);
+}
+
+.admin-content {
+    margin-left: 250px;
+    padding: 0.75rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+    width: calc(100% - 250px);
+    min-height: calc(100vh - 64px);
+    background: var(--pmc-gray);
+    position: relative;
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
+/* Header Styles */
+.admin-header {
+    background: linear-gradient(135deg, var(--pmc-navy) 0%, #004080 100%);
+    border-bottom: 3px solid var(--pmc-gold);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    height: 64px;
+    color: white;
+}
+
+.admin-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    max-width: none;
+}
+
+.admin-header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s ease;
+}
+
+.mobile-menu-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.admin-header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+}
+
+/* Footer positioning */
+.admin-footer {
+    background: white;
+    border-top: 1px solid var(--wp-admin-gray-200);
+    padding: 1.5rem;
+    margin-top: 2rem;
+    color: var(--wp-admin-gray-700);
+    position: relative;
+    clear: both;
+    border-radius: 8px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Fixed Sidebar Navigation - Dark blue text on light background */
+.sidebar-nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: var(--pmc-navy) !important; /* Force dark blue text */
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+    margin: 0.25rem 0;
+}
+
+.sidebar-nav-item:hover {
+    background: var(--wp-admin-sidebar-hover);
+    border-left: 3px solid var(--pmc-gold);
+    color: var(--pmc-navy) !important; /* Force dark blue text on hover */
+    text-decoration: none;
+}
+
+.sidebar-nav-item.active {
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 3px solid var(--pmc-gold);
+    color: var(--pmc-navy) !important; /* Force dark blue text when active */
+    font-weight: 600;
+}
+
+.sidebar-nav-item i {
+    color: var(--pmc-navy) !important; /* Force dark blue icons */
+    margin-right: 0.5rem;
+    width: 16px;
+    text-align: center;
+}
+
+/* Cards */
+.pmc-card, .wp-card, .gov-card, .card, .dashboard-card, .content-card, .admin-card, .project-card, .feedback-card {
+    background: #ffffff !important;
+    border-radius: 8px;
+    border: 1px solid var(--wp-admin-gray-200);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.pmc-card-header, .wp-card-header, .gov-card-header, .card-header, .dashboard-card-header, .content-card-header, .admin-card-header, .project-card-header, .feedback-card-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--wp-admin-gray-200);
+    background: #ffffff !important;
+    color: var(--wp-admin-gray-900);
+    border-radius: 8px 8px 0 0;
+}
+
+.pmc-card-content, .wp-card-content, .gov-card-content, .card-content, .card-body, .dashboard-card-content, .content-card-content, .admin-card-content, .project-card-content, .feedback-card-content {
+    padding: 1.5rem;
+    background: #ffffff !important;
+    color: var(--wp-admin-gray-700);
+}
+
+/* Form Elements */
+.form-input, .wp-form-input, input[type="text"], input[type="email"], input[type="password"], input[type="number"], textarea, select, .gov-form-input, .gov-form-select, .gov-form-textarea {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--wp-admin-gray-300);
+    border-radius: 4px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    background: white;
+    color: var(--wp-admin-gray-900);
+    transition: border-color 0.2s ease;
+}
+
+.form-input:focus, .wp-form-input:focus, input:focus, textarea:focus, select:focus, .gov-form-input:focus, .gov-form-select:focus, .gov-form-textarea:focus {
+    outline: none;
+    border-color: var(--pmc-navy);
+    box-shadow: 0 0 0 1px var(--pmc-navy);
+}
+
+/* Buttons */
+.btn, .wp-btn, button, .gov-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.btn-primary, .wp-btn-primary, .gov-btn-primary {
+    background: var(--pmc-navy);
+    color: white;
+    border-color: var(--pmc-navy);
+}
+
+.btn-primary:hover, .wp-btn-primary:hover, .gov-btn-primary:hover {
+    background: #002244;
+    border-color: #002244;
+}
+
+.btn-secondary, .wp-btn-secondary, .gov-btn-secondary {
+    background: var(--wp-admin-gray-500);
+    color: white;
+    border-color: var(--wp-admin-gray-500);
+}
+
+/* Tables */
+.wp-table, table, .gov-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.wp-table th, th, .gov-table th {
+    background: var(--wp-admin-gray-100);
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--wp-admin-gray-900);
+    border-bottom: 1px solid var(--wp-admin-gray-200);
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.wp-table td, td, .gov-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--wp-admin-gray-200);
+    color: var(--wp-admin-gray-700);
+}
+
+.wp-table tbody tr:hover, tbody tr:hover, .gov-table tr:hover {
+    background: var(--wp-admin-gray-100);
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: #ffffff !important;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--wp-admin-gray-200);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.stat-card-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--wp-admin-gray-900);
+    margin-bottom: 0.25rem;
+}
+
+.stat-card-label {
+    font-size: 0.875rem;
+    color: var(--wp-admin-gray-600);
+    margin: 0;
+}
+
+/* Status Badges */
+.wp-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.wp-badge-success, .bg-green-100 {
+    background: rgba(16, 185, 129, 0.1);
+    color: #065f46;
+}
+
+.wp-badge-warning, .bg-yellow-100 {
+    background: rgba(245, 158, 11, 0.1);
+    color: #92400e;
+}
+
+.wp-badge-danger, .bg-red-100 {
+    background: rgba(239, 68, 68, 0.1);
+    color: #991b1b;
+}
+
+/* Grid Layouts */
+.wp-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.wp-grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.wp-grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.wp-grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Text Colors */
+.text-gray-900 {
+    color: var(--wp-admin-gray-900);
+}
+
+.text-gray-700 {
+    color: var(--wp-admin-gray-700);
+}
+
+.text-gray-600 {
+    color: var(--wp-admin-gray-600);
+}
+
+.text-gray-500 {
+    color: var(--wp-admin-gray-500);
+}
+
+/* Loading states */
+.wp-loading {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--wp-admin-gray-600);
+    font-size: 0.875rem;
+}
+
+.wp-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--wp-admin-gray-300);
+    border-top: 2px solid var(--wp-admin-blue);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Focus states for accessibility */
+*:focus-visible {
+    outline: 2px solid var(--wp-admin-blue);
+    outline-offset: 2px;
+}
+
+/* Mobile overlay */
+.mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.mobile-overlay.active {
+    display: block;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--wp-admin-gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--wp-admin-gray-400);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--wp-admin-gray-500);
+}
+
+/* Enhanced Mobile Styles */
+#mobile-menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+#mobile-menu-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile sidebar overlay */
+#mobile-sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#mobile-sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Notification badge */
+.notification-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background: #dc3545;
+    color: var(--white);
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 0.15rem 0.3rem;
+    border-radius: 10px;
+    min-width: 18px;
+    text-align: center;
+    line-height: 1;
+}
+
+/* User avatar */
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    background: var(--pmc-gold);
+    color: var(--pmc-navy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Prevent body scroll when sidebar is open */
+body.sidebar-open {
+    overflow: hidden;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+    .mobile-menu-toggle,
+    #mobile-menu-toggle {
+        display: flex !important;
+    }
+
+    .admin-sidebar {
+        transform: translateX(-100%);
+        z-index: 1050;
+    }
+
+    .admin-sidebar.mobile-open {
+        transform: translateX(0);
+    }
+
+    .admin-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 0.5rem;
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+
+    .admin-footer {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* Fix mobile content overflow */
+    .admin-content > * {
+        max-width: calc(100vw - 1rem);
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-content {
+        padding: 0.5rem;
+    }
+
+    .pmc-card, .wp-card, .gov-card {
+        margin: 0.5rem 0;
+        background: #ffffff !important;
+    }
+
+    .pmc-card-content, .wp-card-content, .gov-card-content {
+        padding: 1rem;
+        background: #ffffff !important;
+    }
+
+    .pmc-card-header, .wp-card-header, .gov-card-header {
+        padding: 0.75rem 1rem;
+        background: #ffffff !important;
+    }
+
+    .grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+
+    .stat-card {
+        background: #ffffff !important;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Make buttons full width on mobile */
+    .btn, .wp-btn, .gov-btn {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Government Table Styling */
+.gov-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.gov-table th {
+    background: #003366;
+    color: white;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.gov-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.gov-table tr:hover {
+    background: #f9fafb;
+}
+
+/* Government Forms */
+.gov-form-group {
+    margin-bottom: 1rem;
+}
+
+.gov-form-label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+
+.gov-form-input, .gov-form-select, .gov-form-textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.gov-form-input:focus, .gov-form-select:focus, .gov-form-textarea:focus {
+    outline: none;
+    border-color: #003366;
+    box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+}
+
+/* Government Buttons */
+.gov-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.gov-btn-primary {
+    background: #003366;
+    color: white;
+}
+
+.gov-btn-primary:hover {
+    background: #004080;
+}
+
+.gov-btn-secondary {
+    background: #6b7280;
+    color: white;
+}
+
+.gov-btn-secondary:hover {
+    background: #4b5563;
+}
+
+.gov-btn-success {
+    background: #10b981;
+    color: white;
+}
+
+.gov-btn-danger {
+    background: #ef4444;
+    color: white;
+}
+
+/* Government Cards */
+.gov-card {
+    background: #ffffff !important;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+}
+
+.gov-card-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    background: #ffffff !important;
+    border-radius: 8px 8px 0 0;
+}
+
+.gov-card-content {
+    padding: 1.5rem;
+    background: #ffffff !important;
+}
+
+/* Additional enforcements for white cards */
+.bg-white,
+.filter-container,
+.table-row {
+    background: #ffffff !important;
+}
+
+.card,
+.dashboard-card,
+.content-card,
+.admin-card,
+.project-card,
+.feedback-card {
+    background: #ffffff !important;
+}
+
+.card-header,
+.dashboard-card-header,
+.content-card-header,
+.admin-card-header,
+.project-card-header,
+.feedback-card-header {
+    background: #ffffff !important;
+}
+
+.card-content,
+.card-body,
+.dashboard-card-content,
+.content-card-content,
+.admin-card-content,
+.project-card-content,
+.feedback-card-content {
+    background: #ffffff !important;
+}
+
+/* Print styles */
+@media print {
+    .admin-sidebar,
+    .mobile-menu-toggle,
+    #mobile-menu-toggle {
+        display: none !important;
+    }
+
+    .admin-main {
+        padding: 0 !important;
+    }
+
+    .wp-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+}

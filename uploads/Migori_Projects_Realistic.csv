@@ -1,0 +1,19 @@
+project_name,description,department,county,sub_county,ward,location_address,location_coordinates,project_year,total_budget,start_date,expected_completion_date,contractor_name,contractor_contact,step_name,step_description
+Migori County Health Center Construction,Construction of a modern health center to serve the local community with medical facilities and equipment,Water and Energy,Migori,Suna East,Suna Central,"Migori Town Center, near the main market","1.063583, 34.298915",2024,25000000,,,ABC Construction Ltd,25471274674,Project Planning & Approval,"Initial project planning, design review, and regulatory approval process"
+Migori-Isebania Road Improvement,Upgrading of 15km stretch of Migori-Isebania road with tarmac surface and proper drainage,Finance and Economic Planning,Migori,Kuria West,Bukira Central/Ikerege,"Migori-Isebania Highway, Migori Town","0.835649, 34.189739",2024,17500800,,,Kens Construction Ltd,25476473647,Road Survey and Design,Conduct topographical survey and prepare detailed engineering designs
+Rongo Bus stage Upgrade,Construction of modern market stalls with proper sanitation and drainage facilities,Public Service Management and Devolution,Migori,Uriri,North Kanyamkago,Rongo Town Center,"0.762871, 34.599666",2024,12000000,,,Unity Builders,25478947485,Site Preparation,Clear site and prepare foundation for market construction
+Isibania Health Center Extension,Addition of maternity wing and medical equipment procurement,Water and Energy,Migori,Awendo,Central Sakwa,Nyatike Health Center,"1.218048, 34.482936",2024,15000000,,,Medical Contractors Kenya,25471252674,Architectural Planning,Design maternity wing and plan equipment installation
+Lela Dispensary expansion,contruction of ward fercility,"Agriculture, Livestock, Veterinary Services, Fisheries and Blue Economy",Migori,Awendo,West Sakwa,Oyani SDA,"0.975707, 34.241237",2025,97000000,,,ABC Construction Ltd,25484648599,Project Planning & Approval,"Initial project planning, design review, and regulatory approval process"
+Lela market construction,kaminolewe market improvement to market standards,"Lands, Housing, Physical Planning and Urban Development",Migori,Suna East,Kwa,Kaminolewe market,"0.941379, 34.432811",2026,6000000,,,ABC Construction Ltd,25473574848,Project Planning & Approval,"Initial project planning, design review, and regulatory approval process"
+Central Sakwa police post construction,Implementation of public service management and devolution in Central Sakwa ward under Awendo sub-county.,Public Service Board,Migori,Awendo,Central Sakwa,"Central Sakwa Area, Awendo Sub-county","1.200886, 34.621639",2024,44790799,,,Blue Economy Partners,25463848848,Design and Costing,Drafting architectural drawings and estimating costs.
+"South Sakwa Lands, Project","Implementation of lands, housing, physical planning and urban development in South Sakwa ward under Awendo sub-county.",Public Service Management and Devolution,Migori,Rongo,East Kamagambo,"South Sakwa Area, Awendo Sub-county","0.904305, 34.528255",2023,11000000,,,MajiWorks Kenya,25475465154,Land Survey,Carrying out land demarcation and topographical survey.
+North Kamagambo Public Project,Implementation of public service management and devolution in North Kamagambo ward under Rongo sub-county.,"Environment, Natural Resources, Climate Change and Disaster Management",Migori,Suna East,Kakrao,"North Kamagambo Area, Rongo Sub-county","0.874096, 34.581813",2025,14000000,,,EcoDev Works,25471163680,Feasibility Study,Conducting technical and social feasibility assessment.
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
